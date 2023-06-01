@@ -6,9 +6,13 @@
 /*   By: ajeanne <ajeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:31:52 by ajeanne           #+#    #+#             */
-/*   Updated: 2023/05/29 17:34:02 by ajeanne          ###   ########.fr       */
+/*   Updated: 2023/06/01 13:17:56 by ajeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
+#ifndef __CONTACT_H__
+#define __CONTACT_H__
 
 #include <iostream>
 #include <iomanip>
@@ -40,3 +44,5 @@ class Contact	{
 		std::string _phone_number;
 		std::string _darkest_secret;
 };
+
+#endif

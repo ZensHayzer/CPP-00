@@ -6,7 +6,7 @@
 /*   By: ajeanne <ajeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 20:11:09 by ajeanne           #+#    #+#             */
-/*   Updated: 2023/05/30 17:10:44 by ajeanne          ###   ########.fr       */
+/*   Updated: 2023/06/01 13:09:32 by ajeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,12 @@ void	PhoneBook::search_contact(void)	{
 		std::cout << "EOF detected." << std::endl;
 		return;		
 	}
-	for (int i = 0; i < this->_nb_contact; i++)	{
-		if (answer[0] - 48 == i)	{
-			this->_clist[i].Contact::PrintContact();
-			return;
+	if (answer.size() == 1)	{
+		for (int i = 0; i < this->_nb_contact; i++)	{
+			if (answer.at(0) - 48 == i)	{
+				this->_clist[i].Contact::PrintContact();
+				return;
+			}
 		}
 	}
 	std::cout << "This contact doesn't exist" << std::endl << std::endl;
